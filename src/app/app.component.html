@@ -1,0 +1,15 @@
+<h1>App Component</h1>
+<!-- Router-outlet is a directive, available from router library, where router inserts the component,
+whose path gets matched based on the current browsers' url. -->
+
+<!-- atleast one router-outlet, it is called primary router-outlet...v can hv multiple router-outlet 
+by giving name to them....those r called named router-outlets-->
+
+<!--in routing_module if u don't specify outlet, with path & component ...it means it's primary-->
+<router-outlet></router-outlet>  <!--default one: primary router-outlet-->
+<router-outlet name="addLoan"></router-outlet>  <!--named router-outlets..any name-->
+<router-outlet name="route2"></router-outlet> 
+<!--syntax:
+http://localhost:4200/<primary-route> ( <routerOutletName> : <secondaryPath> )
+  ... therefore avoid using these multiple router-outlets-->
+

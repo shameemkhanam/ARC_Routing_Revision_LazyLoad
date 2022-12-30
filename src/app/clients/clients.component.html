@@ -1,0 +1,20 @@
+<p>clients works!</p>
+
+<a [routerLink]="'/user'">User List</a>   <!--it is  a static link, always goes to user only-->
+<table>
+  <tr>
+    <th>Client ID</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+  </tr>
+  <tr *ngFor="let client of clientList">
+    <td>{{client.clientId}}</td>
+    <td>{{client.fname}}</td>
+    <td>{{client.lname}}</td>
+    <!--dynamic link Ex:[routerLink]="['/edit', client.clientId]" == /edit/11 , /edit/12
+      [routerLink]="['/user', client.clientId, 'edit']" == /user/11/edit , /user/12/edit
+      we can create
+    -->
+    <td><a [routerLink]="['/user', client.clientId, 'edit']">Edit</a> | <a [routerLink]="['/delete', client.clientId]">Delete</a></td>
+  </tr>
+</table>
